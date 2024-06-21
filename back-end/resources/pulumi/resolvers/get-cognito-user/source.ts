@@ -9,7 +9,7 @@ export const setupGetCognitoUserSource = (appSyncID: pulumi.Input<string>) => {
    * Lambda Function
    */
   const getCognitoUserResolver = new aws.lambda.CallbackFunction('get-cognito-user-fn', {
-    runtime: 'nodejs14.x',
+    runtime: 'nodejs16.x',
     callback: handler,
     role: baseRole,
     environment: {

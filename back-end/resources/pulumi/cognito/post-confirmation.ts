@@ -34,7 +34,7 @@ const handler: aws.lambda.Callback<any, unknown> = async (event, context, callba
 };
 
 export const postConfirmationLambda = new aws.lambda.CallbackFunction('post-confirmation-fn', {
-  runtime: 'nodejs14.x',
+  runtime: 'nodejs16.x',
   callback: handler,
   role: baseRole,
   environment: {
